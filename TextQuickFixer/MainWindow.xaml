@@ -1,0 +1,26 @@
+﻿<Window x:Class="TextQuickFixer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextQuickFixer"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBox  x:Name="tb_input" Grid.Row="0" TextWrapping="Wrap" AcceptsReturn="True"/>
+        <WrapPanel Grid.Row="1" Background="Gray">
+            <Button x:Name="btn_up" Content="UP" Click="btn_up_Click" Margin="1" Padding="5"/>
+            <Button x:Name="btn_remove_n_r" Content="移除\n\r" Click="btn_remove_n_r_Click" Margin="1" Padding="5"/>
+            <Button x:Name="btn_remove_blanks" Content="移除连续空格" Click="btn_remove_blanks_Click" Margin="1" Padding="5"/>
+            <Button x:Name="btn_sb" Content="sb.Append()" Click="btn_sb_Click" Margin="1" Padding="5"/>
+
+        </WrapPanel>
+        <TextBox  x:Name="tb_output" Grid.Row="2"  TextWrapping="Wrap" AcceptsReturn="True"/>
+
+    </Grid>
+</Window>
